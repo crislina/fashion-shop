@@ -1,6 +1,6 @@
 package com.seed.controller;
 
-import static org.hamcrest.CoreMatchers.nullValue;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -24,7 +24,7 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@RequestMapping(value="/status", method=RequestMethod.GET)
-	public Iterable<OrderStatus> getOrderStatus(){
+	public List<OrderStatus> getOrderStatus(){
 		return orderService.getAllOrderStatus();
 	}
 	
@@ -34,7 +34,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
-	public Iterable<Order> getAllOrder() {
+	public List<Order> getAllOrder() {
 		return orderService.getAllOrders();
 	}
 	

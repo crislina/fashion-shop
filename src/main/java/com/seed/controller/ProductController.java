@@ -1,5 +1,7 @@
 package com.seed.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +20,7 @@ public class ProductController {
 	
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
-	public Iterable<Product> getProducts(){
+	public List<Product> getProducts(){
 		return productService.getAllProducts();
 	}
 	

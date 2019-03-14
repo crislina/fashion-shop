@@ -96,7 +96,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public Iterable<Order> getAllOrders() {
+	public List<Order> getAllOrders() {
 		// TODO Auto-generated method stub
 		return orderRepo.findAll() ;
 	}
@@ -122,7 +122,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public Iterable<OrderStatus> getAllOrderStatus() {
+	public List<OrderStatus> getAllOrderStatus() {
 		// TODO Auto-generated method stub
 		
 		return orderStatusRepo.findAll();

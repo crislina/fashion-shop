@@ -1,5 +1,7 @@
 package com.seed.service;
 
+import java.util.List;
+
 import com.seed.entity.Order;
 import com.seed.entity.OrderStatus;
 
@@ -9,7 +11,7 @@ public interface OrderService {
 	
 	public void update(Order order, Long productId, int quantity);
 	
-	public Iterable<Order> getAllOrders();
+	public List<Order> getAllOrders();
 	
 	public Order retrieveCurrentOrder();
 	
@@ -17,7 +19,7 @@ public interface OrderService {
 	
 	public void saveStatus(OrderStatus orderStatus);
 	
-	public Iterable<OrderStatus> getAllOrderStatus();
+	public List<OrderStatus> getAllOrderStatus();
 	
 	public void deleteItem(Order order, Long productId);
 	
